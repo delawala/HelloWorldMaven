@@ -2,9 +2,28 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+
+<script>
+function myFunction() {
+	var today = new Date()
+	var curHr = today.getHours()
+	var greeting;
+
+	if (curHr < 12) {
+	  greeting = "Good Morning"
+	} else if (curHr < 18) {
+		greeting = "Good Afternoon"
+	} else {
+		greeting = "Good Evening"
+	}
+	
+  document.getElementById("greeting").innerHTML = greeting;
+}
+</script>
+
 <title>Lab 2 - Ubaid</title>
 </head>
-<body>
-	<h1>Welcome to COMP367</h1>
+<body onload="myFunction()">
+	<h1><span id='greeting'></span>, Ubaid, Welcome to COMP367</h1>
 </body>
 </html>
